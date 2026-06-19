@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using internat_bd.Data;
 using internat_bd.Models;
@@ -42,12 +43,14 @@ namespace internat_bd.Controllers
 
         public IActionResult Appeal()
         {
-            return View(new AppealViewModel());
+            return View(new Appeal());
         }
 
         [HttpPost]
-        public IActionResult Appeal(AppealViewModel model)
+        public IActionResult Appeal(Appeal model)
         {
+            model.CreatedAt = DateTime.Now;
+            model.Status = "Новое";
             TempData["AppealMessage"] = "Обращение принято в учебном режиме. Данные пока не сохраняются в базе.";
             return View(model);
         }

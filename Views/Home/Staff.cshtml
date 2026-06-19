@@ -1,4 +1,4 @@
-@model IEnumerable<StaffMember>
+@model IEnumerable<Employee>
 
 @{
     ViewData["Title"] = "Сотрудники";
@@ -14,7 +14,9 @@
                 <div class="card-body">
                     <h2 class="h5 card-title">@person.FullName</h2>
                     <p class="font-weight-bold mb-2">@person.Position</p>
-                    <p class="card-text">@person.Description</p>
+                    <p class="card-text mb-1">Отдел: @person.Department</p>
+                    <p class="card-text mb-1">Телефон: @person.Phone</p>
+                    <p class="card-text">Email: @person.Email</p>
                 </div>
             </div>
         </div>

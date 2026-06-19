@@ -12,73 +12,94 @@ namespace internat_bd.Data
             {
                 Id = 1,
                 Title = "Учебная четверть началась",
-                Summary = "В школе-интернате проходят вводные занятия, медицинские осмотры и организационные классные часы.",
-                PublishedAt = new DateTime(2026, 1, 12)
+                ShortDescription = "В школе-интернате проходят вводные занятия, медицинские осмотры и организационные классные часы.",
+                Content = "Воспитанники вернулись к учебным занятиям. Педагоги проводят вводные уроки, а медицинские работники помогают соблюдать оздоровительный режим.",
+                PublishDate = new DateTime(2026, 1, 12),
+                ImageUrl = "/images/school-building.svg"
             },
             new NewsItem
             {
                 Id = 2,
                 Title = "День здоровья",
-                Summary = "Для воспитанников подготовлены прогулки, спортивные эстафеты и беседы о правильном режиме дня.",
-                PublishedAt = new DateTime(2026, 2, 5)
+                ShortDescription = "Для воспитанников подготовлены прогулки, спортивные эстафеты и беседы о правильном режиме дня.",
+                Content = "В рамках Дня здоровья прошли спортивные и профилактические мероприятия. Учащиеся обсудили важность движения, отдыха и правильного питания.",
+                PublishDate = new DateTime(2026, 2, 5),
+                ImageUrl = "/images/school-building.svg"
             },
             new NewsItem
             {
                 Id = 3,
                 Title = "Творческая выставка",
-                Summary = "В школьном холле размещены рисунки и поделки учащихся, посвященные природе родного края.",
-                PublishedAt = new DateTime(2026, 3, 18)
+                ShortDescription = "В школьном холле размещены рисунки и поделки учащихся, посвященные природе родного края.",
+                Content = "Работы учащихся показывают интерес к природе, школе и семье. Выставка помогает развивать творческие способности воспитанников.",
+                PublishDate = new DateTime(2026, 3, 18),
+                ImageUrl = "/images/school-building.svg"
             }
         };
 
-        public static List<StaffMember> Staff { get; } = new List<StaffMember>
+        public static List<Employee> Staff { get; } = new List<Employee>
         {
-            new StaffMember
+            new Employee
             {
+                Id = 1,
                 FullName = "Иванова Мария Петровна",
                 Position = "Директор",
-                Description = "Организует работу школы-интерната и взаимодействие с родителями."
+                Department = "Администрация",
+                Phone = "+7 (000) 000-00-01",
+                Email = "director@example.ru"
             },
-            new StaffMember
+            new Employee
             {
+                Id = 2,
                 FullName = "Петров Сергей Николаевич",
                 Position = "Заместитель директора по учебной работе",
-                Description = "Отвечает за расписание, образовательные программы и методическую работу."
+                Department = "Учебная часть",
+                Phone = "+7 (000) 000-00-02",
+                Email = "study@example.ru"
             },
-            new StaffMember
+            new Employee
             {
+                Id = 3,
                 FullName = "Сидорова Анна Викторовна",
                 Position = "Педагог-организатор",
-                Description = "Проводит воспитательные мероприятия, конкурсы и тематические встречи."
+                Department = "Воспитательная работа",
+                Phone = "+7 (000) 000-00-03",
+                Email = "events@example.ru"
             },
-            new StaffMember
+            new Employee
             {
+                Id = 4,
                 FullName = "Николаева Елена Андреевна",
                 Position = "Медицинский работник",
-                Description = "Следит за оздоровительным режимом и самочувствием воспитанников."
+                Department = "Медицинская служба",
+                Phone = "+7 (000) 000-00-04",
+                Email = "medical@example.ru"
             }
         };
 
-        public static List<SchoolEvent> Events { get; } = new List<SchoolEvent>
+        public static List<EventItem> Events { get; } = new List<EventItem>
         {
-            new SchoolEvent
+            new EventItem
             {
+                Id = 1,
                 Title = "Классный час о здоровом образе жизни",
-                Date = new DateTime(2026, 4, 10),
+                EventDate = new DateTime(2026, 4, 10),
                 Place = "Актовый зал",
                 Description = "Беседа с учащимися о режиме дня, питании и профилактике заболеваний."
             },
-            new SchoolEvent
+            new EventItem
             {
+                Id = 2,
                 Title = "Спортивная эстафета",
-                Date = new DateTime(2026, 4, 22),
+                EventDate = new DateTime(2026, 4, 22),
                 Place = "Спортивная площадка",
                 Description = "Командные соревнования для укрепления здоровья и развития взаимопомощи."
             },
-            new SchoolEvent
+            new EventItem
             {
+                Id = 3,
                 Title = "Конкурс рисунков",
-                Date = new DateTime(2026, 5, 6),
+                EventDate = new DateTime(2026, 5, 6),
                 Place = "Кабинет изобразительного искусства",
                 Description = "Творческое мероприятие на тему природы, школы и семьи."
             }
