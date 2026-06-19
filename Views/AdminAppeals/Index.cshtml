@@ -1,0 +1,39 @@
+@model IEnumerable<Appeal>
+
+@{
+    ViewData["Title"] = "Управление обращениями";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-striped table-bordered bg-white">
+    <thead>
+        <tr>
+            <th>Дата</th>
+            <th>ФИО</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Статус</th>
+            <th class="text-nowrap">Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-nowrap">@item.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Status</td>
+                <td class="text-nowrap">
+                    <a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@item.Id">Просмотр</a>
+                    <a class="btn btn-sm btn-outline-primary" asp-action="EditStatus" asp-route-id="@item.Id">Статус</a>
+                    <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Admin">Назад в админку</a>

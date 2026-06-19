@@ -1,0 +1,25 @@
+@model Appeal
+
+@{
+    ViewData["Title"] = "Просмотр обращения";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<dl class="row bg-white p-3 border rounded">
+    <dt class="col-sm-3">Дата</dt>
+    <dd class="col-sm-9">@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</dd>
+    <dt class="col-sm-3">ФИО</dt>
+    <dd class="col-sm-9">@Model.FullName</dd>
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+    <dt class="col-sm-3">Телефон</dt>
+    <dd class="col-sm-9">@Model.Phone</dd>
+    <dt class="col-sm-3">Статус</dt>
+    <dd class="col-sm-9">@Model.Status</dd>
+    <dt class="col-sm-3">Сообщение</dt>
+    <dd class="col-sm-9">@Model.Message</dd>
+</dl>
+
+<a class="btn btn-primary" asp-action="EditStatus" asp-route-id="@Model.Id">Изменить статус</a>
+<a class="btn btn-secondary" asp-action="Index">Назад</a>
