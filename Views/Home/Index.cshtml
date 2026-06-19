@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<section class="home-hero mb-4">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <h1 class="display-4">Верхнесаянтуйская санаторная школа-интернат</h1>
+            <p class="lead">
+                Государственное бюджетное оздоровительное общеобразовательное учреждение санаторного типа
+                для детей, нуждающихся в длительном лечении.
+            </p>
+            <p>
+                Школа-интернат сочетает обучение, воспитательную работу и оздоровительный режим. На сайте
+                размещены учебные разделы с общей информацией, новостями, сотрудниками и мероприятиями.
+            </p>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="About">Подробнее о школе</a>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+            <img class="img-fluid rounded school-image" src="~/images/school-building.svg" alt="Иллюстрация здания школы" />
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5 card-title">Обучение</h2>
+                <p class="card-text">Общеобразовательные программы и поддержка учащихся в период лечения.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5 card-title">Оздоровление</h2>
+                <p class="card-text">Режим дня, профилактические мероприятия и внимание к здоровью детей.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h5 card-title">Воспитание</h2>
+                <p class="card-text">Кружки, творческие занятия, спортивные события и школьные традиции.</p>
+            </div>
+        </div>
+    </div>
+</div>

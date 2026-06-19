@@ -1,0 +1,21 @@
+@model IEnumerable<SchoolEvent>
+
+@{
+    ViewData["Title"] = "Мероприятия";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="list-group">
+    @foreach (var schoolEvent in Model)
+    {
+        <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between flex-wrap">
+                <h2 class="h5 mb-1">@schoolEvent.Title</h2>
+                <small class="text-muted">@schoolEvent.Date.ToString("dd.MM.yyyy")</small>
+            </div>
+            <p class="mb-1">@schoolEvent.Description</p>
+            <small class="text-muted">Место проведения: @schoolEvent.Place</small>
+        </div>
+    }
+</div>

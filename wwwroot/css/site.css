@@ -1,0 +1,98 @@
+a.navbar-brand {
+  white-space: normal;
+  font-weight: 700;
+  max-width: 360px;
+}
+
+a {
+  color: #1f6f7a;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1f6f7a;
+  border-color: #1b626c;
+}
+
+.btn-primary:hover {
+  background-color: #195a63;
+  border-color: #154d55;
+}
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 80px;
+  color: #283538;
+  background-color: #f7faf9;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1f3f45;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.home-hero {
+  padding: 2rem;
+  background-color: #e9f5f2;
+  border: 1px solid #d6e7e3;
+  border-radius: 8px;
+}
+
+.school-image {
+  background-color: #fff;
+  border: 1px solid #d6e7e3;
+}
+
+.card,
+.list-group-item,
+.info-panel,
+.appeal-form {
+  border-radius: 8px;
+  border: 1px solid #d6e7e3;
+}
+
+.card {
+  box-shadow: 0 .25rem .75rem rgba(31, 63, 69, .06);
+}
+
+.info-panel,
+.appeal-form {
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background-color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  a.navbar-brand {
+    max-width: 240px;
+    font-size: 1rem;
+  }
+
+  .home-hero {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,22 @@
+@model IEnumerable<StaffMember>
+
+@{
+    ViewData["Title"] = "Сотрудники";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var person in Model)
+    {
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="h5 card-title">@person.FullName</h2>
+                    <p class="font-weight-bold mb-2">@person.Position</p>
+                    <p class="card-text">@person.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

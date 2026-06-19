@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Иллюстрация школы">
+  <rect width="720" height="420" fill="#e9f5f2"/>
+  <circle cx="610" cy="88" r="44" fill="#f5c451"/>
+  <path d="M0 320h720v100H0z" fill="#9bc7a6"/>
+  <path d="M70 318c82-78 161-100 239-65 55 25 104 22 148-10 75-55 147-36 216 75H70z" fill="#6ea07e"/>
+  <rect x="150" y="170" width="420" height="170" rx="4" fill="#ffffff" stroke="#c7d8d4" stroke-width="4"/>
+  <path d="M128 170h464L360 70z" fill="#4f7f8a"/>
+  <rect x="320" y="250" width="80" height="90" fill="#6b8b98"/>
+  <rect x="188" y="208" width="64" height="52" fill="#cde7f0" stroke="#8ab2bd" stroke-width="4"/>
+  <rect x="286" y="208" width="64" height="52" fill="#cde7f0" stroke="#8ab2bd" stroke-width="4"/>
+  <rect x="370" y="208" width="64" height="52" fill="#cde7f0" stroke="#8ab2bd" stroke-width="4"/>
+  <rect x="468" y="208" width="64" height="52" fill="#cde7f0" stroke="#8ab2bd" stroke-width="4"/>
+  <rect x="210" y="295" width="70" height="45" fill="#dfeeea"/>
+  <rect x="440" y="295" width="70" height="45" fill="#dfeeea"/>
+  <path d="M312 158h96v44h-96z" fill="#f7faf9" stroke="#c7d8d4" stroke-width="4"/>
+  <path d="M331 184h58" stroke="#4f7f8a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M350 170h20v28h-20z" fill="#4f7f8a"/>
+</svg>
