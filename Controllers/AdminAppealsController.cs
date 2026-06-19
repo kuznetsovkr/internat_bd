@@ -1,11 +1,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 using internat_bd.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace internat_bd.Controllers
 {
+    [Authorize]
     [Route("Admin/Appeals")]
     public class AdminAppealsController : Controller
     {

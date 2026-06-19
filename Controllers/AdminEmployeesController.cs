@@ -2,11 +2,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using internat_bd.Data;
 using internat_bd.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace internat_bd.Controllers
 {
+    [Authorize]
     [Route("Admin/Employees")]
     public class AdminEmployeesController : Controller
     {

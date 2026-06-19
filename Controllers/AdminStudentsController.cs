@@ -2,12 +2,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using internat_bd.Data;
 using internat_bd.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace internat_bd.Controllers
 {
+    [Authorize]
     [Route("Admin/Students")]
     public class AdminStudentsController : Controller
     {

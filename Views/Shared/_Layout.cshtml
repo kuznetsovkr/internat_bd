@@ -36,9 +36,21 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Appeal">Обращение</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="/Admin">Админка</a>
-                        </li>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="/Admin">Админка</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Выход</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Вход администратора</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
