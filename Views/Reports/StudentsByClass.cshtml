@@ -1,0 +1,51 @@
+@using System.Linq
+@model IEnumerable<Student>
+
+@{
+    ViewData["Title"] = "Список обучающихся по классам";
+    var number = 1;
+}
+
+<div class="print-actions mb-3">
+    <button type="button" class="btn btn-primary" onclick="window.print()">Печать</button>
+    <a class="btn btn-secondary" href="/Admin">Назад в админку</a>
+</div>
+
+<section class="print-report">
+    <div class="report-header text-center mb-4">
+        <p class="mb-1">Верхнесаянтуйская санаторная школа-интернат</p>
+        <h1>Список обучающихся по классам</h1>
+        <p class="text-muted">Дата формирования: @DateTime.Now.ToString("dd.MM.yyyy HH:mm")</p>
+    </div>
+
+    <table class="table table-bordered report-table">
+        <thead>
+            <tr>
+                <th class="text-center">№</th>
+                <th>ФИО ученика</th>
+                <th class="text-center">Дата рождения</th>
+                <th class="text-center">Класс</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var group in Model.GroupBy(student => student.SchoolClass?.Name ?? "Без класса"))
+            {
+                <tr class="table-secondary report-class-row">
+                    <td colspan="4"><strong>@group.Key</strong></td>
+                </tr>
+
+                foreach (var student in group)
+                {
+                    <tr>
+                        <td class="text-center">@number</td>
+                        <td>@student.FullName</td>
+                        <td class="text-center">@student.BirthDate.ToString("dd.MM.yyyy")</td>
+                        <td class="text-center">@student.SchoolClass?.Name</td>
+                    </tr>
+
+                    number++;
+                }
+            }
+        </tbody>
+    </table>
+</section>

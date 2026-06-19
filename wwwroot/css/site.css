@@ -86,6 +86,26 @@ h1 {
   background-color: #fff;
 }
 
+.print-report {
+  background-color: #fff;
+  border: 1px solid #d6e7e3;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.report-header h1 {
+  margin-bottom: .5rem;
+}
+
+.report-table th,
+.report-table td {
+  vertical-align: middle;
+}
+
+.report-class-row td {
+  background-color: #eef4f2;
+}
+
 @media (max-width: 575.98px) {
   a.navbar-brand {
     max-width: 240px;
@@ -94,5 +114,61 @@ h1 {
 
   .home-hero {
     padding: 1.25rem;
+  }
+}
+
+@media print {
+  header,
+  .navbar,
+  .footer,
+  .print-actions,
+  .btn {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff;
+    color: #000;
+    margin: 0;
+    min-height: auto;
+  }
+
+  body {
+    margin-bottom: 0;
+  }
+
+  .container {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .print-report {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .report-header h1 {
+    color: #000;
+    font-size: 22px;
+  }
+
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .report-table th,
+  .report-table td {
+    border: 1px solid #000 !important;
+    padding: 6px 8px !important;
+  }
+
+  .report-class-row td {
+    background-color: #e8e8e8 !important;
+    font-weight: 700;
   }
 }
