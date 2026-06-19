@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace internat_bd.Models
@@ -12,5 +13,7 @@ namespace internat_bd.Models
 
         [StringLength(300)]
         public string Description { get; set; }
+
+        public ICollection<Student> Students { get; set; } = new List<Student>();
     }
 }

@@ -26,6 +26,11 @@ appsettings.*.local.json
 ## Logs
 *.log
 
+## Local database files
+*.db
+*.db-shm
+*.db-wal
+
 ## NuGet
 *.nupkg
 packages/
