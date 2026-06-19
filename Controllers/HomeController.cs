@@ -1,18 +1,23 @@
 using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using internat_bd.Data;
 using internat_bd.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace internat_bd.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context, ILogger<HomeController> logger)
         {
+            _context = context;
             _logger = logger;
         }
 
@@ -26,19 +31,32 @@ namespace internat_bd.Controllers
             return View();
         }
 
-        public IActionResult News()
+        public async Task<IActionResult> News()
         {
-            return View(StaticSchoolData.News);
+            var news = await _context.NewsItems
+                .OrderByDescending(item => item.PublishDate)
+                .ToListAsync();
+
+            return View(news);
         }
 
-        public IActionResult Staff()
+        public async Task<IActionResult> Staff()
         {
-            return View(StaticSchoolData.Staff);
+            var employees = await _context.Employees
+                .OrderBy(employee => employee.Department)
+                .ThenBy(employee => employee.FullName)
+                .ToListAsync();
+
+            return View(employees);
         }
 
-        public IActionResult Events()
+        public async Task<IActionResult> Events()
         {
-            return View(StaticSchoolData.Events);
+            var events = await _context.EventItems
+                .OrderBy(item => item.EventDate)
+                .ToListAsync();
+
+            return View(events);
         }
 
         public IActionResult Appeal()
@@ -47,12 +65,23 @@ namespace internat_bd.Controllers
         }
 
         [HttpPost]
-        public IActionResult Appeal(Appeal model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Appeal(Appeal model)
         {
             model.CreatedAt = DateTime.Now;
             model.Status = "Новое";
-            TempData["AppealMessage"] = "Обращение принято в учебном режиме. Данные пока не сохраняются в базе.";
-            return View(model);
+            ModelState.Remove("Status");
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            _context.Appeals.Add(model);
+            await _context.SaveChangesAsync();
+
+            TempData["AppealMessage"] = "Обращение принято. Спасибо за ваше сообщение.";
+            return RedirectToAction(nameof(Appeal));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
