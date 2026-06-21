@@ -71,7 +71,7 @@ namespace internat_bd.Data
             context.Employees.AddRange(
                 new Employee
                 {
-                    FullName = "Иванова Мария Петровна",
+                    FullName = "Гатапов Руслан Валерьевич",
                     Position = "Директор",
                     Department = "Администрация",
                     Phone = "+7 (3012) 00-10-01",
@@ -79,7 +79,7 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Петров Сергей Николаевич",
+                    FullName = "Цыбенова Оюна Цыренжаповна",
                     Position = "Заместитель директора по учебной работе",
                     Department = "Учебная часть",
                     Phone = "+7 (3012) 00-10-02",
@@ -87,7 +87,7 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Смирнова Ольга Викторовна",
+                    FullName = "Цыбенова Оюна Цыренжаповна",
                     Position = "Учитель русского языка",
                     Department = "Методическое объединение учителей",
                     Phone = "+7 (3012) 00-10-03",
@@ -95,15 +95,15 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Никитин Андрей Валерьевич",
-                    Position = "Учитель математики",
+                    FullName = "Санжеев Булат Владимирович",
+                    Position = "Учитель информатики",
                     Department = "Методическое объединение учителей",
                     Phone = "+7 (3012) 00-10-04",
-                    Email = "math@school.example"
+                    Email = "informatics@school.example"
                 },
                 new Employee
                 {
-                    FullName = "Сидорова Анна Викторовна",
+                    FullName = "Цыренова Екатерина Владимировна",
                     Position = "Воспитатель",
                     Department = "Воспитательная работа",
                     Phone = "+7 (3012) 00-10-05",
@@ -111,7 +111,7 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Николаева Елена Андреевна",
+                    FullName = "Лубсанова Сюсэг Дандоковна",
                     Position = "Медицинская сестра",
                     Department = "Медицинская служба",
                     Phone = "+7 (3012) 00-10-06",
@@ -119,7 +119,7 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Васильева Татьяна Игоревна",
+                    FullName = "Буянтуева Эржэна Цыденовна",
                     Position = "Педагог-психолог",
                     Department = "Служба сопровождения",
                     Phone = "+7 (3012) 00-10-07",
@@ -127,7 +127,7 @@ namespace internat_bd.Data
                 },
                 new Employee
                 {
-                    FullName = "Морозов Алексей Геннадьевич",
+                    FullName = "Цыренпилова Ирина Юрьевна",
                     Position = "Социальный педагог",
                     Department = "Служба сопровождения",
                     Phone = "+7 (3012) 00-10-08",
@@ -209,10 +209,10 @@ namespace internat_bd.Data
                 },
                 new EventItem
                 {
-                    Title = "Открытый урок по математике",
+                    Title = "Открытый урок по информатике",
                     Description = "Открытое занятие для учащихся 7А класса.",
                     EventDate = new DateTime(2026, 5, 14),
-                    Place = "Кабинет математики"
+                    Place = "Кабинет информатики"
                 }
             );
 
